@@ -79,7 +79,7 @@ class Game:
         """Return True if the game is tied, and False otherwise."""
         no_winner = not self._has_winner
         played_moves = (
-            move.label for row in self._current_moves for in row
+            move.label for row in self._current_moves for move in row
         )
         return no_winner and all(played_moves)
         
